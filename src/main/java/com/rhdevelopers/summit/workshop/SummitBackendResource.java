@@ -68,7 +68,12 @@ public class SummitBackendResource {
         ).build();
     }
 
-    /*
+    //uncomment the following snippet to add an API endpoint to add your own data points
+    //coordinates number array is specified [lat,lng] -> so latitude first, then longitude
+    //
+    //e.g. with curl like so
+    //curl --location 'http://localhost:8080/fake/poi/add/point/' --header 'Content-Type: application/json' --data '{"name":"Milano, Italy","description":"Natale's city","coordinates":[45.464203,0.0]}'
+    
     @POST
     @Path("poi/add/point")
     public Response loadCustomPoi(PoiRecord record) {
@@ -77,6 +82,6 @@ public class SummitBackendResource {
             UriBuilder.fromPath("fake/poi/find/"+(SUMMIT_POI_RECORDS.size()-1)).build()
         ).entity("inserted custom data point").build();
     }
-    */
+    
 
 }
